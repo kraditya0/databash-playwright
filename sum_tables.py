@@ -8,7 +8,7 @@ with sync_playwright() as p:
     page = browser.new_page()
 
     for seed in seeds:
-        url = f"https://seed{seed}.datadash.iitm.ac.in/"
+        url = f"https://datadash.iitm.ac.in/seed/{seed}"
         page.goto(url)
 
         cells = page.locator("table td").all_text_contents()
